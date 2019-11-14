@@ -1,0 +1,7 @@
+numpy
+torch>=1.0
+torchvision
+matplotlib
+flask
+requests
+注：可能没写全，开发板看情况装库就好，以及我有用到conda的虚拟环境，但应该不是必要的。
