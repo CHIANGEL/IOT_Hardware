@@ -168,20 +168,3 @@ if __name__ == "__main__":
     
     load_model()
     app.run(host=opt.deployIP, port=opt.deployPORT)
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        

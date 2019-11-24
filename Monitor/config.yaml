@@ -1,0 +1,21 @@
+# request configuration
+server:
+  object_detect:
+    url: 127.0.0.1:32442
+  car_licence:
+    url: 127.0.0.1:32443
+  ali:
+    url: 127.0.0.1:8092
+
+image:
+  path: /tmp/images
+  new_name: file-new.jpg
+  old_name: file-old.jpg
+
+th:
+  device: /dev/ttyUSB0
+  baud: 9600
+
+interval:
+  short: 10
+  long: 30
