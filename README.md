@@ -5,7 +5,9 @@
 
 注: Object_Detection_Depolyment/weights目录用于存放训练好的yolo模型，但是太大了没有上传到git，需要私聊
 
-
 ## 传感器检测模块
 
 主要分为 摄像头、温湿度、震动 三个监测部分。其中温湿度及 
+
+## Dockerfile usage
+外层的Dockerfile是为了创建arm64上的conda，内层的Dockerfile是为了使用conda装模型需要的环境。

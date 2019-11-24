@@ -1,7 +1,9 @@
-numpy
-torch>=1.0
-torchvision
-matplotlib
-flask
-requests
-注：可能没写全，开发板看情况装库就好，以及我有用到conda的虚拟环境，但应该不是必要的。
+numpy=1.17.3
+pytorch-cpu=1.0.1
+matplotlib=3.1.2
+matplotlib-base=3.1.2
+flask=1.1.1
+requests=2.19.1
+tqdm=4.38
+pillow
+torchvision-cpu
