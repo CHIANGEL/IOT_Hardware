@@ -1,2 +1,5 @@
 ##ignore this files##
 Object_Detection_Deployment/weights/yolov3.weights
+.idea
+Monitor/monitor/__pycache__
+Monitor/request/__pycache__
