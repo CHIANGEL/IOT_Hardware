@@ -8,7 +8,7 @@ server:
     url: 127.0.0.1:8092
 
 image:
-  path: /root/images
+  path: /tmp/images
   new_name: file-new.jpg
   old_name: file-old.jpg
 

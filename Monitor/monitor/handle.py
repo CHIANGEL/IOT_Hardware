@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import serial
-# import wiringpi as wpi
+import wiringpi as wpi
 
 
 SEND_MSG = [0x01, 0x03, 0x00, 0x00, 0x00, 0x02, 0xc4, 0x0b]
@@ -43,11 +43,12 @@ def read_th(th_: serial.Serial):
     humidity, temperature = __th_parity(res)
     return temperature, humidity
 
-# def open_sk():
-#     wpi.wiringPiSetup()
-#     wpi.pinMode(1, 0)
-#
-#
-# def read_sk():
-#     return wpi.digitalRead(1)
+
+def open_sk():
+    wpi.wiringPiSetup()
+    wpi.pinMode(1, 0)
+
+
+def read_sk():
+    return wpi.digitalRead(1) == 0
 
