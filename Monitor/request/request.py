@@ -1,10 +1,15 @@
 import base64
 import requests
+import json
+
+
+ENCODING = "utf-8"
 
 
 def _post_(url, data):
     try:
-        res = requests.post(url, data)
+        print("start post %s................................." % data["device_name"])
+        res = requests.post(url, json.dumps(data))
         if res.status_code != requests.codes.ok:
             print(res)
             return {}
@@ -45,9 +50,14 @@ class Request:
         return _post_("%s/flush" % self.ali_server_base, {})
 
     def post_picture(self, identifier, img_path):
-        with open(img_path, 'rb') as f:
-            data = base64.b64encode(f.read())
-        return _post_("%s/flush" % self.ali_server_base, pack_picture(identifier, data))
+        try:
+            with open(img_path, 'rb') as f:
+                data = base64.b64encode(f.read())
+                data_str = data.decode(ENCODING)
+            return _post_("%s/picture" % self.ali_server_base, pack_picture(identifier, data_str))
+        except FileNotFoundError as fnfe:
+            print(fnfe)
+            return {"success": "False"}
 
     def post_property(self, identifier, value):
         return _post_("%s/property" % self.ali_server_base, pack_property(identifier, value))

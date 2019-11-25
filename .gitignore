@@ -3,3 +3,5 @@ Object_Detection_Deployment/weights/yolov3.weights
 .idea
 Monitor/monitor/__pycache__
 Monitor/request/__pycache__
+Object_Detection_Deployment/utils/__pycache__
+Object_Detection_Deployment/__pycache__
