@@ -16,6 +16,6 @@ th:
   device: /dev/ttyUSB0
   baud: 9600
 
-interval:
-  short: 10
-  long: 30
+interval: 10
+
+classes: /tmp/coco.classes
