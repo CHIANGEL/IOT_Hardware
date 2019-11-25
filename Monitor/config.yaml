@@ -17,3 +17,7 @@ th:
   baud: 9600
 
 interval: 10
+classes: ./data/coco.classes
+# target 39 represents bottle
+target: 39
+
