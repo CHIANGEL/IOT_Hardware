@@ -43,12 +43,11 @@ def read_th(th_: serial.Serial):
     humidity, temperature = __th_parity(res)
     return temperature, humidity
 
-
 def open_sk():
     wpi.wiringPiSetup()
     wpi.pinMode(1, 0)
 
 
 def read_sk():
-    return int(wpi.digitalRead(1) == 0)
+    return int(wpi.digitalRead(1) == 0) 
 

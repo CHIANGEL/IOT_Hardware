@@ -17,5 +17,3 @@ th:
   baud: 9600
 
 interval: 10
-
-classes: /tmp/coco.classes
