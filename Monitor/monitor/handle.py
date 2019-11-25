@@ -50,5 +50,5 @@ def open_sk():
 
 
 def read_sk():
-    return wpi.digitalRead(1) == 0
+    return int(wpi.digitalRead(1) == 0)
 

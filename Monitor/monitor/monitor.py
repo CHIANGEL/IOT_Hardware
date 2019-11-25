@@ -1,6 +1,6 @@
 import threading
 
-from Monitor.monitor.handle import *
+from .handle import *
 
 
 class Monitor:
@@ -25,6 +25,9 @@ class Monitor:
         self.img_new = config["image"]["new_name"]
         self.img_old = config["image"]["old_name"]
         self.img_path = config["image"]["path"]
+        self.temperature = 0.0
+        self.humidity = 0.0
+        self.shake = 0
 
     def open(self):
         self.th_ = open_th(self.th_device, self.th_baud)

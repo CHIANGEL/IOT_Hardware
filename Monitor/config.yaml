@@ -1,11 +1,11 @@
 # request configuration
 server:
   object_detect:
-    url: 127.0.0.1:32442
+    url: http://127.0.0.1:32442
   car_licence:
-    url: 127.0.0.1:32443
+    url: http://127.0.0.1:32443
   ali:
-    url: 127.0.0.1:8092
+    url: http://127.0.0.1:8093
 
 image:
   path: /tmp/images

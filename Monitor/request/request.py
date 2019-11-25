@@ -1,10 +1,13 @@
 import base64
+import json
+
 import requests
 
 
 def _post_(url, data):
     try:
-        res = requests.post(url, data)
+        print("start post %s................................." % url)
+        res = requests.post(url, json.dumps(data))
         if res.status_code != requests.codes.ok:
             print(res)
             return {}

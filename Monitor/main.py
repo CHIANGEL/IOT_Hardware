@@ -34,8 +34,8 @@ def main():
         temperature, humidity, shake = monitor.get_state()
         if shake == 1:
             monitor.shake = 0
-        # req.post_property(Property.Temperature, temperature)
-        # req.post_property(Property.Humidity, humidity)
+        print(req.post_property(Property.Temperature.name, temperature))
+        print(req.post_property(Property.Humidity.name, humidity))
         #
         # obj_detect_rsp = req.post_object_detect()
         # warning =
@@ -43,6 +43,9 @@ def main():
         # req.post_property(Property.Warning, 0)
         # req.post_picture(Property.Camera, "%s/%s" % (img_path, img_name))
         monitor.print_state()
+        if shake == 1:
+            monitor.shake = 0
+        time.sleep(4)
 
 
 if __name__ == "__main__":
