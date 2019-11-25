@@ -16,8 +16,10 @@ th:
   device: /dev/ttyUSB0
   baud: 9600
 
-interval: 10
+# interval is a prime, to avoid conflict
+interval: 37 
 classes: ./data/coco.classes
+
 # target 39 represents bottle
 target: 39
 

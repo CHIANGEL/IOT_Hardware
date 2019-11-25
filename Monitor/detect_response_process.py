@@ -67,6 +67,7 @@ def detect_response_process(is_shaked, response, detect_target):
                     best_old_cls_conf = old_cls_conf
                     best_old_cls_pred = old_cls_pred
             if best_central_distance > 50:
+                print("ALERT! Object moved!\n")
                 ret |= 2
                 return ret
     else:  # 识别失败，考虑加点动作哦？

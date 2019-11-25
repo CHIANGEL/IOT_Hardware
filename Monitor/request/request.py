@@ -50,10 +50,14 @@ class Request:
         return _post_("%s/flush" % self.ali_server_base, {})
 
     def post_picture(self, identifier, img_path):
-        with open(img_path, 'rb') as f:
-            data = base64.b64encode(f.read())
-            data_str = data.decode(ENCODING)
-        return _post_("%s/picture" % self.ali_server_base, pack_picture(identifier, data_str))
+        try:
+            with open(img_path, 'rb') as f:
+                data = base64.b64encode(f.read())
+                data_str = data.decode(ENCODING)
+            return _post_("%s/picture" % self.ali_server_base, pack_picture(identifier, data_str))
+        except FileNotFoundError as fnfe:
+            print(fnfe)
+            return {"success": "False"}
 
     def post_property(self, identifier, value):
         return _post_("%s/property" % self.ali_server_base, pack_property(identifier, value))
