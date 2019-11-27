@@ -5,6 +5,7 @@
 
 1. 阿里云: [https://github.com/1000happiness/IOT_Aliyun](https://github.com/1000happiness/IOT_Aliyun)
 2. 前端: [https://github.com/PythonMyLife/ISE_project3_web](https://github.com/PythonMyLife/ISE_project3_web)
+3. 后端: [https://github.com/tx19980520/pledge-guarantee-backend](https://github.com/tx19980520/pledge-guarantee-backend)
 
 ### Object_Detection_Depolyment: 目标检测模块
 
