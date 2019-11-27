@@ -8,6 +8,28 @@ def load_classes(path):
     names = fp.read().split("\n")[:-1]
     return names
 
+
+def compute_iou(rec1, rec2):
+    # 计算两个矩形的面积
+    S_rec1 = (rec1[2] - rec1[0]) * (rec1[3] - rec1[1])
+    S_rec2 = (rec2[2] - rec2[0]) * (rec2[3] - rec2[1])
+ 
+    # 计算矩形面积之和
+    sum_area = S_rec1 + S_rec2
+ 
+    # 计算四个差集的面积
+    left_line = max(rec1[1], rec2[1])
+    right_line = min(rec1[3], rec2[3])
+    top_line = max(rec1[0], rec2[0])
+    bottom_line = min(rec1[2], rec2[2])
+ 
+    # 判断两个矩形是否有交集
+    if left_line >= right_line or top_line >= bottom_line:
+        return 0
+    else:
+        intersect = (right_line - left_line) * (bottom_line - top_line)
+        return (intersect / (sum_area - intersect))*1.0
+
 def detect_response_process(is_shaked, response, detect_target):
     # ret: 3bit(is_shaked, is_moved, amount_changed)
     # 若amount changed为真，is_moved必为真
