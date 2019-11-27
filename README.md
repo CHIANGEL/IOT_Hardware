@@ -1,6 +1,11 @@
 # IOT_Hardware
 王东老师 信息系统工程 大作业 硬件部分
 
+### 其他部分的链接
+
+1. 阿里云: [https://github.com/1000happiness/IOT_Aliyun](https://github.com/1000happiness/IOT_Aliyun)
+2. 前端: [https://github.com/PythonMyLife/ISE_project3_web](https://github.com/PythonMyLife/ISE_project3_web)
+
 ### Object_Detection_Depolyment: 目标检测模块
 
 注: Object_Detection_Depolyment/weights目录用于存放训练好的yolo模型，但是太大了没有上传到git，需要私聊
